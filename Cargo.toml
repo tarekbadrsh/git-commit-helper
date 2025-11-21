@@ -1,0 +1,23 @@
+[package]
+name = "git-commit-helper"
+version = "1.0.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "MCP server that helps Claude write commit messages by reading git changes"
+license = "MIT"
+repository = "https://github.com/yourusername/git-commit-helper"
+keywords = ["git", "commit-message", "mcp", "claude", "ai"]
+categories = ["command-line-utilities", "development-tools"]
+
+[dependencies]
+rmcp = { version = "0.8", features = ["server"] }
+tokio = { version = "1.35", features = ["full"] }
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+schemars = "0.8"
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
