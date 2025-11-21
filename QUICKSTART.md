@@ -20,7 +20,7 @@ Restart your terminal after installation.
 ### Step 2: Clone and Build
 
 ```bash
-git clone https://github.com/yourusername/git-commit-helper.git
+git clone https://github.com/tarekbadrsh/git-commit-helper.git
 cd git-commit-helper
 cargo build --release
 ```
@@ -32,11 +32,13 @@ cargo build --release
 You need the **absolute path** to your binary:
 
 **macOS/Linux:**
+
 ```bash
 echo "$(pwd)/target/release/git-commit-helper"
 ```
 
 **Windows PowerShell:**
+
 ```powershell
 echo "$pwd\target\release\git-commit-helper.exe"
 ```
@@ -48,16 +50,19 @@ echo "$pwd\target\release\git-commit-helper.exe"
 Open your Claude Desktop config file:
 
 **macOS:**
+
 ```bash
 open ~/Library/Application\ Support/Claude/claude_desktop_config.json
 ```
 
 **Windows:**
+
 ```powershell
 notepad %APPDATA%\Claude\claude_desktop_config.json
 ```
 
 **Linux:**
+
 ```bash
 nano ~/.config/Claude/claude_desktop_config.json
 ```
@@ -75,6 +80,7 @@ Add this configuration (replace with your path from Step 3):
 ```
 
 **Example for macOS:**
+
 ```json
 {
   "mcpServers": {
@@ -86,6 +92,7 @@ Add this configuration (replace with your path from Step 3):
 ```
 
 **Example for Windows:**
+
 ```json
 {
   "mcpServers": {
@@ -109,6 +116,7 @@ Add this configuration (replace with your path from Step 3):
 Open Claude Desktop and try these queries:
 
 1. **Navigate to a git repository:**
+
    ```
    cd /path/to/your/git/project
    ```
@@ -163,6 +171,7 @@ chmod +x /path/to/git-commit-helper
 ### "Not a git repository"
 
 Make sure you're in a directory that has been initialized with git:
+
 ```bash
 git init
 # or clone an existing repo
@@ -172,6 +181,7 @@ git clone https://github.com/user/repo.git
 ## 📚 More Information
 
 For detailed documentation, see:
+
 - **[README.md](README.md)** - Full documentation
 - **[RELEASE.md](RELEASE.md)** - Creating releases
 - **[PUBLISHING.md](PUBLISHING.md)** - Publishing to stores

@@ -23,7 +23,7 @@ Here are the major MCP server directories where you should publish:
 
 ### 1. Official Anthropic MCP Servers Repository
 
-**URL:** https://github.com/modelcontextprotocol/servers
+**URL:** <https://github.com/modelcontextprotocol/servers>
 
 **Type:** GitHub Pull Request
 
@@ -34,17 +34,20 @@ Here are the major MCP server directories where you should publish:
 1. Fork the repository
 2. Add your server to the appropriate section in `README.md`
 3. Follow their format:
+
    ```markdown
    ### Git Commit Helper
    An MCP server that helps Claude write professional commit messages by 
    reading git repository information. Built with the official Rust SDK.
    
-   - [GitHub](https://github.com/yourusername/git-commit-helper)
+   - [GitHub](https://github.com/tarekbadrsh/git-commit-helper)
    - Transport: stdio
    - Language: Rust
    - Features: git status, diff, log analysis, commit message generation
    ```
+
 4. Create a pull request with description:
+
    ```
    Add Git Commit Helper - Rust-based git commit assistant
    
@@ -60,6 +63,7 @@ Here are the major MCP server directories where you should publish:
    ```
 
 **Tips:**
+
 - Keep description concise but informative
 - Highlight that it uses the official SDK
 - Mention unique features (Rust, standalone binary)
@@ -67,7 +71,7 @@ Here are the major MCP server directories where you should publish:
 
 ### 2. MCP Store
 
-**URL:** https://mcpstore.site
+**URL:** <https://mcpstore.site>
 
 **Type:** Web Form Submission
 
@@ -75,11 +79,11 @@ Here are the major MCP server directories where you should publish:
 
 **Process:**
 
-1. Visit https://mcpstore.site/submit
+1. Visit <https://mcpstore.site/submit>
 2. Fill out the submission form:
    - **Server Name:** Git Commit Helper
    - **Description:** MCP server that helps Claude write professional commit messages by reading git repository information
-   - **GitHub URL:** https://github.com/yourusername/git-commit-helper
+   - **GitHub URL:** <https://github.com/tarekbadrsh/git-commit-helper>
    - **Category:** Development Tools
    - **Tags:** git, commit-message, rust, developer-tools
    - **Transport:** stdio
@@ -88,6 +92,7 @@ Here are the major MCP server directories where you should publish:
 3. Submit and wait for approval
 
 **Required Information:**
+
 - Clear, concise description (under 200 characters)
 - Valid GitHub repository URL
 - At least one release
@@ -95,7 +100,7 @@ Here are the major MCP server directories where you should publish:
 
 ### 3. MCP Server Finder
 
-**URL:** https://mcpserverfinder.com
+**URL:** <https://mcpserverfinder.com>
 
 **Type:** GitHub PR or Direct Submission
 
@@ -103,7 +108,7 @@ Here are the major MCP server directories where you should publish:
 
 **Process:**
 
-1. Check if submission form exists at https://mcpserverfinder.com/submit
+1. Check if submission form exists at <https://mcpserverfinder.com/submit>
 2. If form exists, fill out:
    - Server name
    - Repository URL
@@ -113,13 +118,14 @@ Here are the major MCP server directories where you should publish:
 3. If no form, create GitHub issue or PR in their repository
 
 **Optimization Tips:**
+
 - Use keywords users might search: "git", "commit", "message", "helper"
 - Include "Rust" and "standalone" to highlight unique features
 - Mention "official SDK" for credibility
 
 ### 4. MCPSERVER.WORK
 
-**URL:** https://mcpserver.work
+**URL:** <https://mcpserver.work>
 
 **Type:** Automated Indexing / Manual Submission
 
@@ -138,6 +144,7 @@ Here are the major MCP server directories where you should publish:
 3. If not auto-indexed, look for submission form on site
 
 **How to add GitHub topics:**
+
 1. Go to your GitHub repository
 2. Click "About" section (gear icon)
 3. Add topics in "Topics" field
@@ -145,12 +152,14 @@ Here are the major MCP server directories where you should publish:
 ## 📝 Writing Effective Descriptions
 
 ### Short Description (Under 200 characters)
+
 ```
 MCP server that helps Claude write professional commit messages by analyzing 
 git repositories. Standalone Rust binary with zero dependencies.
 ```
 
 ### Long Description (For README/Detailed Listings)
+
 ```
 Git Commit Helper is an MCP (Model Context Protocol) server that enables Claude 
 to help you write professional, consistent commit messages by reading and 
@@ -182,6 +191,7 @@ Perfect for:
 Use these across all platforms:
 
 **Primary Tags:**
+
 - git
 - commit-message
 - mcp
@@ -190,6 +200,7 @@ Use these across all platforms:
 - developer-tools
 
 **Secondary Tags:**
+
 - version-control
 - ai-assistant
 - cli-tool
@@ -198,6 +209,7 @@ Use these across all platforms:
 - devops
 
 **Keywords for Search Optimization:**
+
 - git commit helper
 - commit message generator
 - mcp server
@@ -246,12 +258,13 @@ Always provide these links when submitting:
 - **Issue Tracker:** For bug reports and feature requests
 
 Example format:
+
 ```markdown
-- 🏠 [GitHub Repository](https://github.com/yourusername/git-commit-helper)
-- 📦 [Download Latest Release](https://github.com/yourusername/git-commit-helper/releases/latest)
-- ⚡ [Quick Start (3 min)](https://github.com/yourusername/git-commit-helper/blob/main/QUICKSTART.md)
-- 📖 [Full Documentation](https://github.com/yourusername/git-commit-helper/blob/main/README.md)
-- 🐛 [Report Issues](https://github.com/yourusername/git-commit-helper/issues)
+- 🏠 [GitHub Repository](https://github.com/tarekbadrsh/git-commit-helper)
+- 📦 [Download Latest Release](https://github.com/tarekbadrsh/git-commit-helper/releases/latest)
+- ⚡ [Quick Start (3 min)](https://github.com/tarekbadrsh/git-commit-helper/blob/main/QUICKSTART.md)
+- 📖 [Full Documentation](https://github.com/tarekbadrsh/git-commit-helper/blob/main/README.md)
+- 🐛 [Report Issues](https://github.com/tarekbadrsh/git-commit-helper/issues)
 ```
 
 ## ✅ Submission Checklist
@@ -277,21 +290,25 @@ Use this checklist when submitting to each directory:
 After publishing to directories:
 
 ### 1. Social Media
+
 - Post on relevant subreddits (r/rust, r/git, r/programming)
 - Share on Twitter/X with relevant hashtags
 - Post in Discord communities (Anthropic, Rust)
 
 ### 2. Developer Communities
+
 - Hacker News "Show HN"
 - Dev.to article explaining the project
 - LinkedIn post for professional network
 
 ### 3. Documentation Sites
+
 - Add to Awesome MCP lists
 - Contribute to MCP documentation with examples
 - Write blog post about building MCP servers in Rust
 
-### Example Social Post:
+### Example Social Post
+
 ```
 🚀 Built a Git Commit Helper MCP server in Rust!
 
@@ -374,21 +391,25 @@ Study successful MCP servers:
 Recommended timeline:
 
 **Week 1:**
+
 - Polish documentation
 - Create first release
 - Test on all platforms
 
 **Week 2:**
+
 - Submit to official Anthropic repository
 - Submit to MCP Store
 - Submit to MCP Server Finder
 
 **Week 3:**
+
 - Share on social media
 - Write blog post
 - Engage with early users
 
 **Week 4:**
+
 - Address any issues found
 - Update based on feedback
 - Plan next version
@@ -432,5 +453,5 @@ GitHub: [your link]
 
 **Good luck with your publishing! 🚀**
 
-Remember: The goal is to help users discover and use your tool. Focus on clear 
+Remember: The goal is to help users discover and use your tool. Focus on clear
 documentation and responsive support, and the community will help spread the word!

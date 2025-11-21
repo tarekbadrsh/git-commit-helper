@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Rust](https://img.shields.io/badge/Rust-1.75+-orange.svg)](https://www.rust-lang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg)](https://github.com/yourusername/git-commit-helper)
+[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg)](https://github.com/tarekbadrsh/git-commit-helper)
 [![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-green.svg)](https://modelcontextprotocol.io)
 
 An MCP (Model Context Protocol) server that helps Claude write professional commit messages by reading git repository information. Built with the official Anthropic Rust SDK for maximum performance and reliability.
@@ -65,19 +65,22 @@ Visit [rustup.rs](https://rustup.rs) for more installation options.
 ### Build from Source
 
 1. **Clone and build:**
+
    ```bash
-   git clone https://github.com/yourusername/git-commit-helper.git
+   git clone https://github.com/tarekbadrsh/git-commit-helper.git
    cd git-commit-helper
    cargo build --release
    ```
 
 2. **Find your binary:**
+
    ```bash
    # The binary will be at:
    # target/release/git-commit-helper
    ```
 
 3. **Optional - Install globally:**
+
    ```bash
    # Copy to a directory in your PATH
    sudo cp target/release/git-commit-helper /usr/local/bin/
@@ -112,6 +115,7 @@ You need to tell Claude Desktop where to find the binary.
 **Platform-specific examples:**
 
 **macOS/Linux:**
+
 ```json
 {
   "mcpServers": {
@@ -123,6 +127,7 @@ You need to tell Claude Desktop where to find the binary.
 ```
 
 **Windows:**
+
 ```json
 {
   "mcpServers": {
@@ -134,6 +139,7 @@ You need to tell Claude Desktop where to find the binary.
 ```
 
 **💡 Tip:** To get the absolute path:
+
 ```bash
 # macOS/Linux:
 cd git-commit-helper
@@ -153,21 +159,25 @@ echo "$pwd\target\release\git-commit-helper.exe"
 Try these natural language queries with Claude:
 
 ### Generate Commit Messages
+
 - "I have staged changes, write me a commit message"
 - "Review my changes and suggest a conventional commit message"
 - "Help me write a commit message for these changes"
 
 ### Review Changes
+
 - "Show me what I'm about to commit"
 - "What files have I modified?"
 - "Show me all my changes in this repository"
 
 ### Understand Context
+
 - "Show me the last 10 commits"
 - "What's the commit message style in this project?"
 - "Show me recent commits so I can match the style"
 
 ### Combined Workflows
+
 - "Look at my staged changes and recent commits, then write a commit message that matches our style"
 - "Show me what I've changed and help me decide what to commit first"
 
@@ -176,34 +186,42 @@ Try these natural language queries with Claude:
 The server provides four tools that Claude can use:
 
 ### 1. `git_status`
+
 Shows the current state of the repository - modified, staged, and untracked files.
 
 **Parameters:**
+
 - `repo_path` (optional): Path to git repository
 
 **Example:** "Show me what files I've changed"
 
 ### 2. `git_diff_staged`
+
 Shows line-by-line changes for files staged with `git add`. This is what will be committed.
 
 **Parameters:**
+
 - `repo_path` (optional): Path to git repository
 
 **Example:** "Show me what I'm about to commit"
 
 ### 3. `git_diff_all`
+
 Shows all changes in the repository, both staged and unstaged. Can optionally include untracked files.
 
 **Parameters:**
+
 - `repo_path` (optional): Path to git repository
 - `include_untracked` (optional, default: false): Include untracked files
 
 **Example:** "Show me all my changes including untracked files"
 
 ### 4. `git_log`
+
 Shows recent commit history to understand commit message conventions.
 
 **Parameters:**
+
 - `repo_path` (optional): Path to git repository
 - `limit` (optional, default: 10, max: 50): Number of commits to show
 
@@ -258,6 +276,7 @@ Build for all platforms at once:
 ```
 
 This creates binaries for:
+
 - Linux x86_64: `target/x86_64-unknown-linux-gnu/release/git-commit-helper`
 - macOS Intel: `target/x86_64-apple-darwin/release/git-commit-helper`
 - macOS ARM: `target/aarch64-apple-darwin/release/git-commit-helper`
@@ -274,6 +293,7 @@ cargo build --release --target x86_64-unknown-linux-gnu
 ```
 
 **Available targets:**
+
 - `x86_64-unknown-linux-gnu` - Linux x86_64
 - `x86_64-apple-darwin` - macOS Intel
 - `aarch64-apple-darwin` - macOS Apple Silicon

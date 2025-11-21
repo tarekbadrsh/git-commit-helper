@@ -5,7 +5,7 @@ edition = "2021"
 authors = ["Your Name <your.email@example.com>"]
 description = "MCP server that helps Claude write commit messages by reading git changes"
 license = "MIT"
-repository = "https://github.com/yourusername/git-commit-helper"
+repository = "https://github.com/tarekbadrsh/git-commit-helper"
 keywords = ["git", "commit-message", "mcp", "claude", "ai"]
 categories = ["command-line-utilities", "development-tools"]
 

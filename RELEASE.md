@@ -16,12 +16,14 @@ This guide explains how to create and publish releases of Git Commit Helper.
 Update the version in these files:
 
 **1. `Cargo.toml`:**
+
 ```toml
 [package]
 version = "1.0.0"  # Update this
 ```
 
 **2. `src/main.rs`:**
+
 ```rust
 ServerInfo {
     name: "git-commit-helper".to_string(),
@@ -31,6 +33,7 @@ ServerInfo {
 
 **3. `CHANGELOG.md`:**
 Add a new section at the top:
+
 ```markdown
 ## [1.1.0] - 2024-11-21
 
@@ -42,6 +45,7 @@ Add a new section at the top:
 ```
 
 Commit these changes:
+
 ```bash
 git add Cargo.toml src/main.rs CHANGELOG.md
 git commit -m "chore: bump version to 1.0.0"
@@ -57,6 +61,7 @@ Build for all platforms using the provided script:
 ```
 
 This creates binaries in:
+
 - `target/x86_64-unknown-linux-gnu/release/git-commit-helper`
 - `target/x86_64-apple-darwin/release/git-commit-helper`
 - `target/aarch64-apple-darwin/release/git-commit-helper`
@@ -129,14 +134,16 @@ git push origin v1.0.0
 ### Step 6: Create GitHub Release
 
 1. **Navigate to GitHub releases page:**
+
    ```
-   https://github.com/yourusername/git-commit-helper/releases/new
+   https://github.com/tarekbadrsh/git-commit-helper/releases/new
    ```
 
 2. **Select your tag:**
    - Choose the tag you just pushed (v1.0.0)
 
 3. **Set release title:**
+
    ```
    v1.0.0 - Initial Release
    ```
@@ -202,8 +209,9 @@ git push origin v1.0.0
 ### Step 7: Verify Release
 
 1. Visit your releases page:
+
    ```
-   https://github.com/yourusername/git-commit-helper/releases
+   https://github.com/tarekbadrsh/git-commit-helper/releases
    ```
 
 2. Verify:
@@ -213,10 +221,11 @@ git push origin v1.0.0
    - Download links work
 
 3. Test downloading and running a binary:
+
    ```bash
    # Download
    curl -L -o git-commit-helper \
-     https://github.com/yourusername/git-commit-helper/releases/download/v1.0.0/git-commit-helper-v1.0.0-linux-x86_64
+     https://github.com/tarekbadrsh/git-commit-helper/releases/download/v1.0.0/git-commit-helper-v1.0.0-linux-x86_64
 
    # Make executable
    chmod +x git-commit-helper
@@ -234,6 +243,7 @@ Follow [Semantic Versioning](https://semver.org/):
 - **Patch (1.0.X)**: Bug fixes, backwards compatible
 
 Examples:
+
 - `1.0.0` → `1.0.1` - Bug fixes only
 - `1.0.0` → `1.1.0` - Added new git tool
 - `1.0.0` → `2.0.0` - Changed MCP protocol version (breaking)
@@ -285,6 +295,7 @@ Some platforms require specific setup:
 Requires OSX cross toolchain - may be easier to build on actual macOS hardware.
 
 **Windows cross-compilation from Linux:**
+
 ```bash
 sudo apt-get install mingw-w64
 rustup target add x86_64-pc-windows-gnu
@@ -295,6 +306,7 @@ rustup target add x86_64-pc-windows-gnu
 ### Binary Too Large
 
 If binary size exceeds 5MB, check:
+
 - Profile settings in Cargo.toml (should use `opt-level = "z"`)
 - Strip symbols: `strip = true`
 - LTO enabled: `lto = true`

@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-11-21
 
 ### Added
+
 - Initial release of Git Commit Helper MCP server
 - `git_status` tool - Show current repository state with modified, staged, and untracked files
 - `git_diff_staged` tool - Display line-by-line changes for staged files
@@ -23,10 +24,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optimized binary size (~3MB) with LTO and size optimizations
 
 ### Technical Details
+
 - Uses stdio transport for communication with Claude Desktop
 - Implements ServerHandler trait for MCP protocol compliance
 - Async/await architecture with Tokio runtime
 - Proper error handling without panics
 - Clean separation between tool logic and command execution
 
-[1.0.0]: https://github.com/yourusername/git-commit-helper/releases/tag/v1.0.0
+[1.0.0]: https://github.com/tarekbadrsh/git-commit-helper/releases/tag/v1.0.0
