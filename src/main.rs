@@ -1,23 +1,31 @@
 use anyhow::{Context, Result};
 use rmcp::{
-    handler::server::wrapper::Parameters, model::*, serve_server, tool, tool_router,
-    ErrorData as McpError, ServerHandler,
+    handler::server::{tool::ToolRouter, wrapper::Parameters},
+    model::*,
+    serve_server,
+    tool,
+    tool_router,
+    ErrorData as McpError,
+    ServerHandler,
 };
 use serde::{Deserialize, Serialize};
 use std::process::Command;
 
 /// Git Commit Helper - MCP server for helping Claude write commit messages
 #[derive(Debug, Clone)]
-struct GitCommitHelper {}
+struct GitCommitHelper {
+    tool_router: ToolRouter<Self>,
+}
 
 impl GitCommitHelper {
     fn new() -> Self {
-        Self {}
+        Self {
+            tool_router: Self::tool_router(),
+        }
     }
 }
 
 /// Helper function to execute git commands safely
-#[allow(dead_code)]
 fn run_git_command(args: &[&str], repo_path: Option<&str>) -> Result<String, String> {
     let mut cmd = Command::new("git");
 
@@ -63,7 +71,6 @@ fn run_git_command(args: &[&str], repo_path: Option<&str>) -> Result<String, Str
     }
 }
 
-#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize, ::schemars::JsonSchema)]
 struct GitStatusParams {
     /// Path to the git repository (optional, defaults to current directory)
@@ -71,7 +78,6 @@ struct GitStatusParams {
     repo_path: Option<String>,
 }
 
-#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize, ::schemars::JsonSchema)]
 struct GitDiffStagedParams {
     /// Path to the git repository (optional, defaults to current directory)
@@ -79,7 +85,6 @@ struct GitDiffStagedParams {
     repo_path: Option<String>,
 }
 
-#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize, ::schemars::JsonSchema)]
 struct GitDiffAllParams {
     /// Path to the git repository (optional, defaults to current directory)
@@ -90,7 +95,6 @@ struct GitDiffAllParams {
     include_untracked: Option<bool>,
 }
 
-#[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize, ::schemars::JsonSchema)]
 struct GitLogParams {
     /// Path to the git repository (optional, defaults to current directory)
